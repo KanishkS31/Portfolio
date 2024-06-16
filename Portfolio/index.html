@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Goggins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/OIP.jpeg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Bibliography</a></li>
+                </ul>
+            </nav>
+          <div class="header-text">
+            <p>A Ultramarathon Runner and <br>Public Speaker</p>
+            <h1>Hi, I'm <br><span>D</span>avid <span>G</span>oggins</h1>
+          </div>
+        </div>
+    </div> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/David_Goggins.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About</h1>
+                    <p><i>David Goggins (born February 17, 1975) is an American retired United States Navy SEAL. 
+                        He is also an ultramarathon runner, ultra-distance cyclist, triathlete, public speaker,
+                         author of two memoirs, and was inducted into the International Sports Hall of Fame for his achievements in sport. 
+                         Goggins was also awarded the VFW Americanism award in 2018 for his service in the United States Armed Forces. 
+                         Goggins also published a New York Times Best Seller book titled Can't Hurt Me: Master Your Mind and Defy the Odds.
+                        </i> </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('SportsCareer')"><span>Sports Career</span></p>
+                        <p class="tab-links" onclick="opentab('MilitaryCareer')"><span>Military Career</span></p>
+                        <p class="tab-links" onclick="opentab('OtherWorks')"><span>Other Works</span></p>
+                    </div>
+                    <div class="tab-contents active-tab" id="SportsCareer">
+                        <p><li><b>Height </b>: 6"1'(185cm) </li><br>
+                            <li><b>Weight</b>: 200lb(91 kg) </li><br>
+                            <li><b>Sports</b>: Ultra-distance cycling,<br> Triathlon, <br>Ultramarathon</li></p>
+                    </div>
+                    <div class="tab-contents" id="MilitaryCareer">
+                        <p><li><b>Service Branch</b>: United State Air Force <br>United States Navy </li><br><li><b>Year Of Service</b>:1994-1999(USAF) <br>2001-2015(USN) </li><br><li><b>Rank</b>: Cheif petty officer <br><b>Unit</b>: SEAL Team 5 <br>SDV Team 1</li></p>
+                    </div>
+                    <div class="tab-contents" id="OtherWorks"><p><li>Special Operation Warrior Foundation Featured in the book <b>Living with the SEAL by <i>Jesse Iltzler</i>(2015)</b> <br>Former Guiness world record holder for pull ups(4030 in 17 hours)</li></p></div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="Bibliography">
+        <div class="container"><h1 class="sub-title">Books</h1>
+            <div class="Bibliography-list">
+                <div class="col-2">
+                    <h2>Book 1</h2>
+                    <p>Goggins, David (2018). Can't Hurt Me: <br>Master Your Mind and Defy the Odds. Lioncrest Publishing.</p>
+                    <a href="#">learn more</a>
+                    <h2>Book 2</h2>
+                    <p>Goggins, David (2022). Never Finished: <br> Your Mind and Win the War Within. Lioncrest Publishing.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div class="col-1">
+                    <img src="images/which-david-goggins-book-do-i-read-first.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
